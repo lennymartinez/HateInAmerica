@@ -1,0 +1,24 @@
+# Visual Studio cache directory
+/.vs/
+*.vscode
+
+# Ignore system generated files
+.DS_Store
+
+# All my test files
+/images/*
+/css/dumbell.css
+/css/taggd.css
+/data/tidyHateCrimeStatistics.csv
+/data/top18universities.csv
+dumbbelltop18.html
+taggd.html
+
+# Test JS files
+/js/d3.js
+/js/d3.min.js
+/js/dumbbell.js
+/js/highcharts-3d.js
+/js/highcharts-more.js
+/js/taggd.js
+/js/taggd.min.js
