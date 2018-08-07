@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+  <title>State of Hate, Interactive</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+  	body{
+	background-color: #efeee8;
+	color: #171717;
+}
+.filler {
+	background-color: yellow;
+	height:600px;
+
+}
+.filler-vid {
+	height:1080px;
+	background-color: #F9423A;
+	width:100%;
+	z-index:100;
+}
+
+.content-stop {
+	border: 1px solid blue;
+}
+
+#map-nav {
+	position: fixed;
+	width: 400px;
+	height: 400px;
+	top: 50px;
+	right: 15px;
+	background-color: transparent;
+	z-index: 5000;
+	border: 5px solid black;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+.marker {
+  background-color: #F9423A;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.marker-active{
+background-color:blue;
+width: 30px;
+height: 30px;
+}
+  </style>
+  <script src="./js/jquery.waypoints.js"></script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row" id="cluster1">
+			<div class="col-12">
+				<h2 class="text-left">1. Interstate 10 W video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster2">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="twenty-nine-palms-ca">
+					<h2 class="text-left">2. Content for Twentynine Palms will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+				<div id="map-nav">
+					<div id="map"></div>
+				</div>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster3">
+			<div class="col-12">
+				
+				<h2 class="text-left">3. Highway 395 N video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+				</div>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster4">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="olancha-ca">
+					<h2 class="text-left">4. Content for Olancha will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="manzanar-ca">
+					<h2 class="text-left">5. Content for Manzanar will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="bishop-ca">
+					<h2 class="text-left">6. Content for Bishop will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+			
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster5">
+			<div class="col-12">
+				<h2 class="text-left">7. Highway 50 E video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster6">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="virginia-city-nv">
+					<h2 class="text-left">8. Content for Virginia City will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="stagecoach-nv">
+					<h2 class="text-left">9. Content for Stagecoach will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster7">
+			<div class="col-12">
+				<h2 class="text-left">10. Interstate 80 E video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster8">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="salt-lake-cty-ut">
+					<h2 class="text-left">11. Content for Salt Lake City City will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="little-america-wy">
+					<h2 class="text-left">12. Content for Little America will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="laramie-wy">
+					<h2 class="text-left">13. Content for Laramie will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster9">
+			<div class="col-12">
+				<h2 class="text-left">14. Interstate 90 E video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster10">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="keystone-sd">
+					<h2 class="text-left">15. Content for Keystone will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="mitchell-sd">
+					<h2 class="text-left">16. Content for Mitchell will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster11">
+			<div class="col-12">
+				<h2 class="text-left">17. Highway 79 S video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster12">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="tekamah-ne">
+					<h2 class="text-left">18. Content for Tekamah will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster13">
+			<div class="col-12">
+				<h2 class="text-left">19. Interstate 80 E video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster14">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="perry-ia">
+					<h2 class="text-left">20. Content for Perry will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="carbon-hill-il">
+					<h2 class="text-left">21. Content for Carbon Hill will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster15">
+			<div class="col-12">
+				<h2 class="text-left">22. Interstate 90 E video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster16">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="fremont-oh">
+					<h2 class="text-left">23. Content for Fremont will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="harrisburg-pa">
+					<h2 class="text-left">24. Content for Harrisburg will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="gettysburg-pa">
+					<h2 class="text-left">25. Content for Gettysburg will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster17">
+			<div class="col-12">
+				<h2 class="text-left">26. Interstate 270 S video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster18">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="washington-dc">
+					<h2 class="text-left">27. Content for D.C. will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster19">
+			<div class="col-12">
+				<h2 class="text-left">28. Interstate 64 E video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster20">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="beckley-wv">
+					<h2 class="text-left">29. Content for Beckley will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="mallie-ky">
+					<h2 class="text-left">30. Content for Mallie will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="london-ky">
+					<h2 class="text-left">31. Content for London will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster21">
+			<div class="col-12">
+				<h2 class="text-left">32. Interstate 40 W video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster22">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="memphis-tn">
+					<h2 class="text-left">33. Content for Memphis will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="van-buren-ar">
+					<h2 class="text-left">34. Content for Van Buren will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster23">
+			<div class="col-12">
+				<h2 class="text-left">35. Route 66 W video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster24">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="oklahoma-city-ok">
+					<h2 class="text-left">36. Content for Oklahoma City will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="elk-city-ok">
+					<h2 class="text-left">37. Content for Elk City will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="amarillo-tx">
+					<h2 class="text-left">38. Content for Amarillo will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="albuquerque-nm">
+					<h2 class="text-left">39. Content for ABQ will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="grants-nm">
+					<h2 class="text-left">40. Content for Grants will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+				<div class="content-stop" id="sanders-">
+					<h2 class="text-left">40. Content for Sanders will go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+		<div class="row" id="cluster25">
+			<div class="col-12">
+				<h2 class="text-left">35. Highway 87 S video will go here</h2>
+				<div class="filler-vid">&nbsp;</div><br>
+			</div> <!--end of columns-->
+		</div>	<!--end of cluster1 div-->
+
+		<div class="row" id="cluster26">
+			<div class="col-xs-12 col-lg-7 offset-lg-1">
+				<div class="content-stop" id="phoenix-az">
+					<h2 class="text-left">43. Engame content go here</h2>
+					<div class="filler">&nbsp;</div><br>
+				</div>
+			</div> <!--end of content column-->
+			<div class="col-lg-3">
+				<h4>Interactive map for navigation goes here</h4>
+			</div><!--end of interactive map columns-->
+		</div>	<!--end of cluster2 div-->
+
+	</div> <!--end of container-fluid -->
+	<script>
+		var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
+		var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
+    
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGVubnltYXJ0aW5lemQiLCJhIjoiY2prMWZqNDJlMDBsMzNrb3h6dXZ1Zm50NyJ9.K_9DxP150GAPZI9CbLsJfQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/lennymartinezd/cjk2v295836sa2sqz7k0xjeu6',
+      center: [longStart[0],  latStart[0]],
+      interactive: false,
+      zoom: 2.5
+    });
+        var geojson = {
+            "type": "FeatureCollection",
+            "features": [
+            {
+            "geometry": {
+            "coordinates": [
+            -112.074037,
+            33.448377
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "1,555,324",
+            "city": "Phoenix",
+            "state": "Arizona",
+            "marker": "phoenix"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -116.054169,
+            34.135558
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "26,452",
+            "city": "Twentynine Palms",
+            "state": "California",
+            "marker": "twenty-nine-palms"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -118.006472,
+            36.281883
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "203",
+            "city": "Olancha",
+            "state": "California",
+            "marker": "manzanar"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -118.152789,
+            36.727229
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "---",
+            "city": "Manzanar",
+            "state": "California",
+            "tag": "manzanar"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -118.399664,
+            37.361424
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "3760",
+            "city": "Bishop",
+            "state": "California",
+            "marker": "bishop"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -119.649979,
+            39.309514
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "711",
+            "city": "Virginia City",
+            "state": "Nevada",
+            "marker": "virginia-city"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -119.374057,
+            39.373804
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "1,703",
+            "city": "Stagecoach",
+            "state": "Nevada",
+            "marker": "stagecoach"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -111.891047,
+            40.760779
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "191,446",
+            "city": "Salt Lake City",
+            "state": "Utah",
+            "marker": "salt-lake-city"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -109.859034,
+            41.543569
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "86",
+            "city": "Little America",
+            "state": "Wyoming",
+            "marker": "little-america"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -105.591101,
+            41.311367
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "32,096",
+            "city": "Laramie",
+            "state": "Wyoming",
+            "marker": "laramie"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -103.418246,
+            43.895544
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "318",
+            "city": "Keystone",
+            "state": "South Dakota",
+            "marker": "keystone"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -98.029799,
+            43.709428
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "15,610",
+            "city": "Mitchell",
+            "state": "South Dakota",
+            "marker": "mitchell"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -96.221128,
+            41.778322
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "1,662",
+            "city": "Tekamah",
+            "state": "Nebraska",
+            "marker": "tekamah"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -94.10718,
+            41.838596
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "7,876",
+            "city": "Perry",
+            "state": "Iowa",
+            "marker": "perry"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -88.300063,
+            41.296976
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "380",
+            "city": "Carbon Hill",
+            "state": "Illinois",
+            "marker": "carbon-hill"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -83.121863,
+            41.35033
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "16,388",
+            "city": "Fremont",
+            "state": "Ohio",
+            "marker": "fremont"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -76.886701,
+            40.273191
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "49,160",
+            "city": "Harrisburg",
+            "state": "Pennsylvania",
+            "marker": "harrisburg"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -77.231095,
+            39.830929
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "7,643",
+            "city": "Gettysburg",
+            "state": "Pennsylvania",
+            "marker": "gettysburg"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -77.036871,
+            38.907192
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "659,009",
+            "city": "Washington, D.C.",
+            "state": "",
+            "marker": "washington-dc"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -81.188156,
+            37.77817
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "17,348",
+            "city": "Beckley",
+            "state": "West Virginia",
+            "marker": "beckley"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -82.910524,
+            37.274667
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "15,884",
+            "city": "Mallie",
+            "state": "Kentucky",
+            "marker": "mallie"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -84.083265,
+            37.128977
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "8,111",
+            "city": "London",
+            "state": "Kentucky",
+            "marker": "london"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -90.04898,
+            35.149534
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "655,857",
+            "city": "Memphis",
+            "state": "Tennessee",
+            "marker": "memphis"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -94.348268,
+            35.436756
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "23,155",
+            "city": "Van Buren",
+            "state": "Arkansas",
+            "marker": "van-buren"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -97.516428,
+            35.46756
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "620,015",
+            "city": "Oklahoma City",
+            "state": "Oklahoma",
+            "marker": "oklahoma-city"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -99.404259,
+            35.411994
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "12,426",
+            "city": "Elk City",
+            "state": "Oklahoma",
+            "marker": "elk-city"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -101.831297,
+            35.221997
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "197,570",
+            "city": "Amarillo",
+            "state": "Texas",
+            "marker": "amarillo"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -106.650422,
+            35.084386
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "556,859",
+            "city": "Albuquerque",
+            "state": "New Mexico",
+            "marker": "albuquerque"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -107.851447,
+            35.14726
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "9,263",
+            "city": "Grants",
+            "state":"New Mexico",
+            "marker": "grants"
+            },
+            "type": "Feature"
+            },
+            {
+            "geometry": {
+            "coordinates": [
+            -109.328794,
+            35.209143
+            ],
+            "type": "Point"
+            },
+            "properties": {
+            "population": "574",
+            "city": "Sanders",
+            "state":"Arizona",
+            "marker": "sanders"
+            },  
+            "type": "Feature"
+            }
+            ]
+            };
+    
+
+    map.on('load', function() {
+    	getStops();
+      for(i=0;i<30;i++){
+    		getRouteBetweenStops(i);
+    	}
+    });
+
+    function getRouteBetweenStops(j) {
+      var longStart = [-112.074037,-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794];
+      var longEnd = [-116.054169,-118.006472,-118.152789,-118.399664,-119.649979,-119.374057,-111.891047,-109.859034,-105.591101,-103.418246,-98.029799,-96.221128,-94.10718,-88.300063,-83.121863,-76.886701,-77.231095,-77.036871,-81.188156,-82.910524,-84.083265,-90.04898,-94.348268,-97.516428,-99.404259,-101.831297,-106.650422,-107.851447,-109.328794, -112.074037];
+      var latStart = [33.448377,34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143];
+      var latEnd = [34.135558,36.281883,36.727229,37.361424,39.309514,39.373804,40.760779,41.543569,41.311367,43.895544,43.709428,41.778322,41.838596,41.296976,41.35033,40.273191,39.830929,38.907192,37.77817,37.274667,37.128977,35.149534,35.436756,35.46756,35.411994,35.221997,35.084386,35.14726,35.209143,33.448377];
+      var routeID = ["route1","route2","route3","route4","route5","route6","route7","route8","route9","route10","route11","route12","route13","route14","route15","route16","route17","route18","route19","route20","route21","route22","route23","route24","route25","route26","route27","route28","route29","route30"];
+
+      var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[j] + ',' + latStart[j] + ';' + longEnd[j] + ',' + latEnd[j] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+      $.ajax({
+        method:'GET',
+        url: directionsRequest,
+      }).done(function(data) {
+          var route = data.routes[0].geometry;
+        map.addLayer({
+          id: routeID[j],
+          type: 'line',
+          source: {
+            type: 'geojson',
+          data: {
+            type: 'Feature',
+            geometry: route
+          }
+          },
+          paint: {
+            'line-width': 5,
+          	'line-color' : '#ba8a18'
+          },
+          layout: {
+          	'visibility': 'none'
+          }
+        });
+      });
+
+      }
+
+    function drawRoadTripRoute(longarray, latarray) {
+		var latStart = latarray;
+		var longStart = longarray;
+		var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[0] + ',' + latStart[0] + ';' + longStart[1] + ',' + latStart[1] + ';' + longStart[2] + ',' + latStart[2] + ';' + longStart[3] + ',' + latStart[3] + ';' + longStart[4] + ',' + latStart[4] + ';' + longStart[5] + ',' + latStart[5] + ';' + longStart[6] + ',' + latStart[6] + ';' + longStart[7] + ',' + latStart[7] + ';' + longStart[8] + ',' + latStart[8] + ';' + longStart[9] + ',' + latStart[9] + ';' + longStart[10] + ',' + latStart[10] + ';' + longStart[11] + ',' + latStart[11] + ';' + longStart[12] + ',' + latStart[12] + ';' + longStart[13] + ',' + latStart[13] + ';' + longStart[14] + ',' + latStart[14] + ';' + longStart[15] + ',' + latStart[15] + ';' + longStart[16] + ',' + latStart[16] + ';' + longStart[17] + ',' + latStart[17] + ';' + longStart[18] + ',' + latStart[18] + ';' + longStart[19] + ',' + latStart[19] + ';' + longStart[20] + ',' + latStart[20] + ';' + longStart[21] + ',' + latStart[21] + ';' + longStart[22] + ',' + latStart[22] + ';' + longStart[23] + ',' + latStart[23] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+		var directionsRequest2 = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + longStart[23] + ',' + latStart[23] + ';' + longStart[24] + ',' + latStart[24] + ';' + longStart[25] + ',' + latStart[25] + ';' + longStart[26] + ',' + latStart[26] + ';' + longStart[27] + ',' + latStart[27] + ';' + longStart[28] + ',' + latStart[28] + ';' + longStart[29] + ',' + latStart[29] + ';' + longStart[0] + ',' + latStart[0] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
+		$.ajax({
+		      method:'GET',
+		      url: directionsRequest,
+		      }).done(function(data) {
+		      var route = data.routes[0].geometry;
+		      map.addLayer({
+		            id: 'part1',
+		            type: 'line',
+		            source: {
+		                  type: 'geojson',
+		            data: {
+		                  type: 'Feature',
+		                  geometry: route
+		            }
+		            },
+		            paint: {
+		                  'line-width': 5,
+		                  'line-color' : '#171717'
+		            }
+		      });
+		      })
+
+
+		      $.ajax({
+		            method:'GET',
+		            url: directionsRequest2,
+		            }).done(function(data) {
+		            var route = data.routes[0].geometry;
+		            map.addLayer({
+		                  id: 'part2',
+		                  type: 'line',
+		                  source: {
+		                        type: 'geojson',
+		                        data: {
+		                              type: 'Feature',
+		                              geometry: route
+		                        }
+		                  },
+		                  paint: {
+		                        'line-width': 5,
+		                        'line-color' : '#171717'
+		                  }
+		            });
+		            });
+		      }
+        
+    function getStops() {
+    	//console.log("eh3");
+    	geojson.features.forEach(function(marker) {
+    	//console.log(marker.properties.marker);
+    	// create a HTML element for each feature
+    	var el = document.createElement('div');
+    	el.className = 'marker';
+    	el.id = marker.properties.marker;
+    	// make a marker for each feature and add to the map
+    	new mapboxgl.Marker(el)
+    		.setLngLat(marker.geometry.coordinates)
+    		.addTo(map);
+    	//console.log("added to map");
+
+    	});
+    }
+    var $stop1 = $('#twenty-nine-palms-ca');
+    var $stop2 = $('#twenty-nine-palms-ca');
+    var $stop3 = $('#twenty-nine-palms-ca');
+    var $stop4 = $('#twenty-nine-palms-ca');
+    var $stop5 = $('#twenty-nine-palms-ca');
+    var $stop6 = $('#twenty-nine-palms-ca');
+    var $stop7 = $('#twenty-nine-palms-ca');
+    var $stop8 = $('#twenty-nine-palms-ca');
+    var $stop9 = $('#twenty-nine-palms-ca');
+    var $stop10 = $('#twenty-nine-palms-ca');
+
+
+			$stop1.waypoint(function(direction) {
+    	
+    	if(direction == 'down')
+        {
+        console.log('waypoint');
+        //map.setCenter([-116.054169,34.135558]);
+        map.flyTo({center: [longStart[1],latStart[1]], zoom: 6, speed:1});
+        map.setLayoutProperty('route1', 'visibility', 'visible');
+        $('#twenty-nine-palms').addClass('marker-active');
+ 
+    	} else
+        {
+            console.log('all the way up');
+            map.flyTo({center: [longStart[0],latStart[0]], zoom: 6, speed:1});
+            map.setLayoutProperty('route1', 'visibility', 'none');
+            $('#twenty-nine-palms').removeClass('marker-active')
+        }
+        }, {offset: '25%'})  
+    </script>
+   
+</body>
+</html>
