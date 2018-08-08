@@ -43,11 +43,11 @@ Highcharts.chart('container', {
     },
 
     title: {
-        text: 'Crime rate growth 2015-2016 - Top 18 Universities'
+        text: 'Hate crimes reported by universities in 2015, 2016'
     },
 
     subtitle: {
-        text: 'Source: Department of Education'
+        text: 'Ohio State University experienced the largest increase in reported hate crimes, going from 4 hate crimes in 2015to 32 hate crimes in 2016'
     },
 
     xAxis: {
@@ -60,7 +60,7 @@ Highcharts.chart('container', {
     yAxis: {
         min: 0,
         max: 35,
-        tickInterval: 3,
+        tickInterval: 5,
         title: {
             text: 'Number of Incidents'
         }
@@ -93,7 +93,7 @@ Highcharts.chart('container', {
 
     series: [{
         name: '2015',
-        color: '#BADA55',
+        color: '#171717',
         data: [
             {
                 y: 4,
@@ -188,7 +188,7 @@ Highcharts.chart('container', {
         ]
     }, {
         name: '2016',
-        color: '#BA8A18',
+        color: '#A10D03',
         data: [
             {
                 y: 32,
