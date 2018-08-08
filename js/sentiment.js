@@ -76,7 +76,7 @@ Highcharts.chart('container', {
           if (this.point.myTitle === '') {
             return '\u25CF Number of posts: <b>' + this.y + '</b>';
           } else {
-            return '<b>' + this.point.myTitle + '</b><br /><br />' + this.point.myText + '<br /><br />\u25CF Number of posts: <b>' + this.y + '</b>';
+            return '<b>' + this.point.myTitle + '</b><br /><br /><p>' + this.point.myText + '</p><br /><br />\u25CF Number of posts: <b>' + this.y + '</b>';
           }
       }
     },
@@ -107,7 +107,8 @@ Highcharts.chart('container', {
             myText: 'The Trump Administration completes reunification for eligible children under the age of 5. According to the Department of Justice, at this point 57 of the 103 children have been reunified',
             marker: {
                 symbol: 'diamond',
-                radius: 8
+                radius: 8,
+                fillColor: '#A10D03'
             }
         }, {
             y: 9, 
@@ -123,7 +124,8 @@ Highcharts.chart('container', {
             myText: 'The Department of Homeland Security announces that nearly 2,000 children have been separated during the  zero-tolerance initiative. The announcement cues hundreds to march for the “Families Belong Together” movement.',
             marker: {
                 symbol: 'diamond',
-                radius: 8
+                radius: 8,
+                fillColor: '#A10D03'
             }
         }, {
             y: 7, 
@@ -139,7 +141,8 @@ Highcharts.chart('container', {
             myText: 'Homeland Security Secretary Kirstjen Nielsen says the adminstration "will not apologize" for separating families at the border, claiming the agency was just doing its job.',
             marker: {
                 symbol: 'diamond',
-                radius: 8
+                radius: 8,
+                fillColor: '#A10D03'
             }
         }, {
             y: 61, 
@@ -147,15 +150,17 @@ Highcharts.chart('container', {
             myText: 'The G.O.P moves to end the separation of families at the border – a decision that divided Republicans from President Trump.',
             marker: {
                 symbol: 'diamond',
-                radius: 8
+                radius: 8,
+                fillColor: '#A10D03'
             }
         }, {
-            y: 56, 
+            y: 56,
             myTitle: 'The executive order post public pressure',
             myText: 'Trump signs an executive order to keep families together at the U.S. Mexico border after an explosive public outrage. “I didn’t like the sight or feeling of families being separated,” Trump said.',
             marker: {
                 symbol: 'diamond',
-                radius: 8
+                radius: 8,
+                fillColor: '#A10D03'
             }
         }, {
             y: 45, 
@@ -163,7 +168,8 @@ Highcharts.chart('container', {
             myText: 'The Pentagon agrees to accommodate as many as 20,000 unaccompanied migrant children from the U.S.-Mexico border.',
             marker: {
                 symbol: 'diamond',
-                radius: 8
+                radius: 8,
+                fillColor: '#A10D03'
             }
         }, {
             y: 34, 
