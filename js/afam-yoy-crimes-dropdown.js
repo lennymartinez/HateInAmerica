@@ -33,18 +33,18 @@ function get2012Map () {
                 spacingTop: 15
             },
             title: {
-                text: 'Hates crimes against African-American community in 2012',
+                text: '',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             subtitle: {
                 text: 'Hover on counties to see data',
                 style: {
                     fontWeight: '400',
-                    fontFamily: 'Roboto Condensed'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -141,7 +141,7 @@ function get2012Map () {
         Highcharts.setOptions({
             chart: {
                 style: {
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             credits: {
@@ -172,11 +172,11 @@ function get2013Map () {
                 spacingTop: 15
             },
             title: {
-                text: 'Hates crimes against African-American community in 2013',
+                text: '',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             subtitle: {

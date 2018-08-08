@@ -71,7 +71,7 @@
 
 # 10yrhategrowth
 
-* [] Finalize Headline
+* [ ] Finalize Headline
 * [ ] Finalize subhead
 * [ ] Can we make the lines thicker?
 
@@ -79,6 +79,7 @@
 
 * [ ] Finalize Headline
 * [ ] Finalize subhead
+
 
 
 # indigenous women 
