@@ -120,8 +120,8 @@
 
 
 # indigenous women 
-* **HEAD:** 
-* **Subhead:**
+* **HEAD:** Missing Indigenous Women
+* **Subhead:** Records from the National Crime Information Center are some of most telling numbers showing the missing indigenous women's crisis. Some states, such as Washington, are better at tracking at recording their missing peoples.  
 * Can we move the head and subhead outside of the map and do something similar with the year as we do with the black american map
 * Need a new hover color for this graphic, we can't use the red. I think: 'rgba(161, 13, 3, .3)' is good. 
 * Have to remove Purged and Active from the tool tip
