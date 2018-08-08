@@ -20,7 +20,7 @@
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'Oswald'
+            fontFamily: 'Roboto Mono'
         }
     },
     lang: {
@@ -31,20 +31,21 @@ Highcharts.setOptions({
 Highcharts.chart('container', {
 
     chart: {
+        backgroundColor: '#EFEEE8',
         type: 'line'
     },
 
     credits: {
-      text: 'SOURCE: U.S. Department of Education, Office of Postsecondary Education, Campus Safety and Security (CSS) survey.',
+      text: '',
       href: ''
     },
 
     title: {
-      text: 'Hate crimes reported by universities since 2005.'
+      text: ''
     },
   
     subtitle: {
-      text: 'Reported hate crimes have seen a 2854.5% increase since 2005. In year 2016, the number of reported hate crimes was 1,300. This is based on 6,506 institutions with 11,260 campuses. The crime data reported by the institutions have not been subjected to independent verification by the U.S. Department of Education. Therefore, the Department cannot vouch for the accuracy of the data reported here.'
+      text: ''
     },
     legend: {
       enabled: false
@@ -67,7 +68,7 @@ Highcharts.chart('container', {
     tooltip: {
       formatter: function () {
           // console.log(this);
-          return '\u25CF ' + this.x + ' Reported hate crimes: <b>' + this.y + '</b>';
+          return '<span class="report-year">' + this.x + '</span><br>Hate crimes reported: <b>' + this.y + '</b>';
       }
     },
 

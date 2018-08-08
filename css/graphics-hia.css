@@ -1,0 +1,43 @@
+body {
+	font-family: 'Roboto Mono', monospace !important;
+	font-weight: 400;
+	background-color: #efeee8 !important;
+}
+
+.graphics-hed {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.graphics-subhed {
+	font-size: 0.80rem; 
+	line-height: 1.5;
+}
+.map-graphic,{
+	height: 600px;
+	min-width: 310px;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.hia-graphic{
+	display: block;
+	height: 500px;
+	min-width: 310px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.fed-map-tip .highcharts-tooltip {
+	padding-bottom: 10px;
+	max-width: 200px;
+	max-height: 300px;
+}
+.graphics-source {
+	font-size: 0.6rem !important;
+}
+
+
+.report-year {
+	font-weight: 500;
+}

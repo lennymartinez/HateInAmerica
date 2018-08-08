@@ -3,7 +3,7 @@ $(function (){
     Highcharts.setOptions({
         chart: {
             style: {
-                fontFamily: 'Oswald'
+                fontFamily: 'Roboto Mono'
             }
         },
         credits: {
@@ -22,7 +22,7 @@ $(function (){
                 enabled: false
             },
             chart: {
-                // backgroundColor: '#EFEFEF',
+                backgroundColor: '#EFEEE8',
                 events: {
                     load: function() {
                         var chart = $('#container').highcharts(),
@@ -55,7 +55,7 @@ $(function (){
                 }
             },
             title: {
-                text: 'chart sub-title goes here',
+                text: '',
                 floating: true,
                 verticalAlign: 'top',
                 margin: 0
@@ -70,21 +70,9 @@ $(function (){
                 enabled: true,
                 useHTML: true,
                 headerFormat: '',
-                pointFormat: '<b>{point.name}</b><br />{point.data-point}'
+                pointFormat: '<span class="fed-map-tip text-left"><b>{point.name}</b><br/><p>{point.data-point}</p></span>'
             },
             colorAxis: {
-                // stops: [
-                //     [0, '#EFEFEF'],
-                //     // [5, '#BADA55'],
-                //     [0.2106, '#5DA7FF'], 
-                //     [0.4218, '#3BE0E8'], 
-                //     [0.6618, '#4DFFA9'], 
-                //     [0.8873, '#3EE83B']
-                //     // [0.5364, '#C2FF40'], 
-                //     // [0.6756, '#C2FF40']  
-                // ],
-                // min: 0,
-                // max: 11
                 dataClasses: [{
                     from: 0,
                     to: 0,
@@ -126,7 +114,7 @@ $(function (){
                 name: 'State Laws',
                 states: {
                     hover: {
-                        color: '#5DA7FF'
+                        color: '#171717'
                     }
                 },
                 dataLabels: {
