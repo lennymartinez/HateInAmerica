@@ -17,7 +17,7 @@ $(function () {
                     spacingTop: 15
                 },
                 title: {
-                    text: 'Hates crimes against African-American community in 2012',
+                    text: 'Hates crimes against the black community in 2012',
                     style: {
                         fontWeight: '700',
                         fontSize: '1.5em'
@@ -60,22 +60,46 @@ $(function () {
                         color: '#FFFFFF' //A10D03
                     }, {
                         from: 1,
-                        to: 14,
+                        to: 9,
+                        color: 'rgba(161, 13, 3, .05)'
+                    }, {
+                        from: 10,
+                        to: 19,
                         color: 'rgba(161, 13, 3, .1)'
                     }, {
-                        from: 15,
+                        from: 20,
                         to: 29,
-                        color: 'rgba(161, 13, 3, .3)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 30,
+                        to: 39,
+                        color: 'rgba(161, 13, 3, .3)'
+                    }, {
+                        from: 40,
                         to: 49,
-                        color: 'rgba(161, 13, 3, .5)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 50,
-                        to: 85,
+                        to: 59,
+                        color: 'rgba(161, 13, 3, .5)'
+                    },  {
+                        from: 60,
+                        to: 69,
+                        color: 'rgba(161, 13, 3, .6)'
+                    }, {
+                        from: 70,
+                        to: 79,
                         color: 'rgba(161, 13, 3, .7)'
                     }, {
-                        from: 86,
+                        from: 80,
+                        to: 89,
+                        color: 'rgba(161, 13, 3, .8)'
+                    },  {
+                        from: 90,
+                        to: 99,
+                        color: 'rgba(161, 13, 3, .9)'
+                    }, {
+                        from: 100,
                         to: 150,
                         color: 'rgba(161, 13, 3, 1)'
                     }]
@@ -98,7 +122,7 @@ $(function () {
                     mapData: countiesMap,
                     data: data2012,
                     joinBy: ['hc-key', 'hc_code'],
-                    name: 'Crimes against African-Americans',
+                    name: 'Crimes against black Americans',
                     tooltip: {
                         valueSuffix: ''
                     },
@@ -156,7 +180,7 @@ $(function () {
                     spacingTop: 15
                 },
                 title: {
-                    text: 'Hates crimes against African-American community in 2013',
+                    text: 'Hates crimes against the black community in 2013',
                     style: {
                         fontWeight: '700',
                         fontSize: '1.5em'
@@ -196,25 +220,49 @@ $(function () {
                     dataClasses: [{
                         from: 0,
                         to: 0,
-                        color: '#FFFFFF'
+                        color: '#FFFFFF' //A10D03
                     }, {
                         from: 1,
-                        to: 14,
+                        to: 9,
+                        color: 'rgba(161, 13, 3, .05)'
+                    }, {
+                        from: 10,
+                        to: 19,
                         color: 'rgba(161, 13, 3, .1)'
                     }, {
-                        from: 15,
+                        from: 20,
                         to: 29,
-                        color: 'rgba(161, 13, 3, .3)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 30,
+                        to: 39,
+                        color: 'rgba(161, 13, 3, .3)'
+                    }, {
+                        from: 40,
                         to: 49,
-                        color: 'rgba(161, 13, 3, .5)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 50,
-                        to: 85,
+                        to: 59,
+                        color: 'rgba(161, 13, 3, .5)'
+                    },  {
+                        from: 60,
+                        to: 69,
+                        color: 'rgba(161, 13, 3, .6)'
+                    }, {
+                        from: 70,
+                        to: 79,
                         color: 'rgba(161, 13, 3, .7)'
                     }, {
-                        from: 86,
+                        from: 80,
+                        to: 89,
+                        color: 'rgba(161, 13, 3, .8)'
+                    },  {
+                        from: 90,
+                        to: 99,
+                        color: 'rgba(161, 13, 3, .9)'
+                    }, {
+                        from: 100,
                         to: 150,
                         color: 'rgba(161, 13, 3, 1)'
                     }]
@@ -237,7 +285,7 @@ $(function () {
                     mapData: countiesMap,
                     data: data2013,
                     joinBy: ['hc-key', 'hc_code'],
-                    name: 'Crimes against African-Americans',
+                    name: 'Crimes against black Americans',
                     tooltip: {
                         valueSuffix: ''
                     },
@@ -295,7 +343,7 @@ $(function () {
                     spacingTop: 15
                 },
                 title: {
-                    text: 'Hates crimes against African-American community in 2014',
+                    text: 'Hates crimes against the black community in 2014',
                     style: {
                         fontWeight: '700',
                         fontSize: '1.5em'
@@ -335,25 +383,49 @@ $(function () {
                     dataClasses: [{
                         from: 0,
                         to: 0,
-                        color: '#FFFFFF'
+                        color: '#FFFFFF' //A10D03
                     }, {
                         from: 1,
-                        to: 14,
+                        to: 9,
+                        color: 'rgba(161, 13, 3, .05)'
+                    }, {
+                        from: 10,
+                        to: 19,
                         color: 'rgba(161, 13, 3, .1)'
                     }, {
-                        from: 15,
+                        from: 20,
                         to: 29,
-                        color: 'rgba(161, 13, 3, .3)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 30,
+                        to: 39,
+                        color: 'rgba(161, 13, 3, .3)'
+                    }, {
+                        from: 40,
                         to: 49,
-                        color: 'rgba(161, 13, 3, .5)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 50,
-                        to: 85,
+                        to: 59,
+                        color: 'rgba(161, 13, 3, .5)'
+                    },  {
+                        from: 60,
+                        to: 69,
+                        color: 'rgba(161, 13, 3, .6)'
+                    }, {
+                        from: 70,
+                        to: 79,
                         color: 'rgba(161, 13, 3, .7)'
                     }, {
-                        from: 86,
+                        from: 80,
+                        to: 89,
+                        color: 'rgba(161, 13, 3, .8)'
+                    },  {
+                        from: 90,
+                        to: 99,
+                        color: 'rgba(161, 13, 3, .9)'
+                    }, {
+                        from: 100,
                         to: 150,
                         color: 'rgba(161, 13, 3, 1)'
                     }]
@@ -376,7 +448,7 @@ $(function () {
                     mapData: countiesMap,
                     data: data2014,
                     joinBy: ['hc-key', 'hc_code'],
-                    name: 'Crimes against African-Americans',
+                    name: 'Crimes against black Americans',
                     tooltip: {
                         valueSuffix: ''
                     },
@@ -434,7 +506,7 @@ $(function () {
                     spacingTop: 15
                 },
                 title: {
-                    text: 'Hates crimes against African-American community in 2015',
+                    text: 'Hates crimes against the black community in 2015',
                     style: {
                         fontWeight: '700',
                         fontSize: '1.5em'
@@ -515,7 +587,7 @@ $(function () {
                     mapData: countiesMap,
                     data: data2015,
                     joinBy: ['hc-key', 'hc_code'],
-                    name: 'Crimes against African-Americans',
+                    name: 'Crimes against black Americans',
                     tooltip: {
                         valueSuffix: ''
                     },
@@ -573,7 +645,7 @@ $(function () {
                     spacingTop: 15
                 },
                 title: {
-                    text: 'Hates crimes against African-American community in 2016',
+                    text: 'Hates crimes against the black community in 2016',
                     style: {
                         fontWeight: '700',
                         fontSize: '1.5em'
@@ -613,25 +685,49 @@ $(function () {
                     dataClasses: [{
                         from: 0,
                         to: 0,
-                        color: '#FFFFFF'
+                        color: '#FFFFFF' //A10D03
                     }, {
                         from: 1,
-                        to: 14,
+                        to: 9,
+                        color: 'rgba(161, 13, 3, .05)'
+                    }, {
+                        from: 10,
+                        to: 19,
                         color: 'rgba(161, 13, 3, .1)'
                     }, {
-                        from: 15,
+                        from: 20,
                         to: 29,
-                        color: 'rgba(161, 13, 3, .3)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 30,
+                        to: 39,
+                        color: 'rgba(161, 13, 3, .3)'
+                    }, {
+                        from: 40,
                         to: 49,
-                        color: 'rgba(161, 13, 3, .5)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 50,
-                        to: 85,
+                        to: 59,
+                        color: 'rgba(161, 13, 3, .5)'
+                    },  {
+                        from: 60,
+                        to: 69,
+                        color: 'rgba(161, 13, 3, .6)'
+                    }, {
+                        from: 70,
+                        to: 79,
                         color: 'rgba(161, 13, 3, .7)'
                     }, {
-                        from: 86,
+                        from: 80,
+                        to: 89,
+                        color: 'rgba(161, 13, 3, .8)'
+                    },  {
+                        from: 90,
+                        to: 99,
+                        color: 'rgba(161, 13, 3, .9)'
+                    }, {
+                        from: 100,
                         to: 150,
                         color: 'rgba(161, 13, 3, 1)'
                     }]
@@ -654,7 +750,7 @@ $(function () {
                     mapData: countiesMap,
                     data: data2016,
                     joinBy: ['hc-key', 'hc_code'],
-                    name: 'Crimes against African-Americans',
+                    name: 'Crimes against black Americans',
                     tooltip: {
                         valueSuffix: ''
                     },
