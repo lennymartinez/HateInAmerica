@@ -40,11 +40,11 @@ Highcharts.chart('container', {
     },
 
     title: {
-      text: '10-Year hate growth'
+      text: 'Hate crimes reported by universities since 2005.'
     },
   
     subtitle: {
-      text: 'In year 2016, the number of reported hate crimes was 1,300. This is based on 6,506 institutions with 11,260 campuses. The crime data reported by the institutions have not been subjected to independent verification by the U.S. Department of Education. Therefore, the Department cannot vouch for the accuracy of the data reported here.'
+      text: 'Reported hate crimes have seen a 2854.5% increase since 2005. In year 2016, the number of reported hate crimes was 1,300. This is based on 6,506 institutions with 11,260 campuses. The crime data reported by the institutions have not been subjected to independent verification by the U.S. Department of Education. Therefore, the Department cannot vouch for the accuracy of the data reported here.'
     },
     legend: {
       enabled: false
@@ -74,7 +74,7 @@ Highcharts.chart('container', {
     series: [{
       name:"Hate crimes reported",
       data: [44, 74, 48, 60, 947, 1198, 938, 998, 975, 1021, 1043, 1300],
-      color: '#BA8A18'
+      color: '#A10D03'
     }],
   
     responsive: {

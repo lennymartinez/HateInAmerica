@@ -88,31 +88,35 @@ $(function (){
                 dataClasses: [{
                     from: 0,
                     to: 0,
-                    color: 'rgba(255, 255, 255, .9)'
+                    color: '#FFFFFF'
                 }, {
                     from: 0.1,
                     to: 1.9,
-                    color: 'rgba(154, 174, 255, .4)'
+                    color: 'rgba(161, 13, 3, .1)'
                 }, {
                     from: 2,
                     to: 3.9,
-                    color: 'rgba(126, 143, 209, .5)'
+                    color: 'rgba(161, 13, 3, .3)'
                 }, {
                     from: 4,
                     to: 5.9,
-                    color: 'rgba(80, 91, 133, .6)'
+                    color: 'rgba(161, 13, 3, .4)'
                 }, {
                     from: 6,
                     to: 7.9,
-                    color: 'rgba(58, 66, 97, .7)'
+                    color: 'rgba(161, 13, 3, .5)'
                 }, {
                     from: 8,
                     to: 9.9,
-                    color: 'rgba(126, 143, 209, .5)'
+                    color: 'rgba(161, 13, 3, .7)'
                 }, {
                     from: 10,
+                    to: 10.9,
+                    color: 'rgba(161, 13, 3, .8)'
+                }, {
+                    from: 11,
                     to: 12,
-                    color: 'rgba(38, 43, 63, .8)'
+                    color: 'rgba(161, 13, 3, 1)'
                 }]
             },
             series: [{
