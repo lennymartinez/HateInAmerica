@@ -85,6 +85,6 @@ Highcharts.chart('container', {
       }]
     }
   
-  });   
+  });
 
 //});
