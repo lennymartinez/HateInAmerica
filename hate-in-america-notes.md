@@ -71,7 +71,7 @@
 
 # 10yrhategrowth
 
-* [x] Finalize Headline
+* [] Finalize Headline
 * [ ] Finalize subhead
 * [ ] Can we make the lines thicker?
 
