@@ -32,7 +32,7 @@ $(function (){
                                 element.update({
                                     // borderColor: 'rgba(158, 37, 49, .75)',
                                     // borderWidth: 2,
-                                    // color: '#BADA55',
+                                    //color: '#BADA55',
                                     color: {
                                         pattern: {
                                             path: {
