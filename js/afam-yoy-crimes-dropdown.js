@@ -172,7 +172,7 @@ function get2013Map () {
                 spacingTop: 15
             },
             title: {
-                text: ' ',
+                text: '',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
@@ -183,7 +183,7 @@ function get2013Map () {
                 text: 'Hover on counties to see data',
                 style: {
                     fontWeight: '400',
-                    fontFamily: 'Roboto Condensed'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -280,7 +280,7 @@ function get2013Map () {
         Highcharts.setOptions({
             chart: {
                 style: {
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             credits: {
@@ -311,18 +311,18 @@ function get2014Map () {
                 spacingTop: 15
             },
             title: {
-                text: 'Hates crimes against African-American community in 2014',
+                text: '',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             subtitle: {
                 text: 'Hover on counties to see data',
                 style: {
                     fontWeight: '400',
-                    fontFamily: 'Roboto Condensed'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -419,7 +419,7 @@ function get2014Map () {
         Highcharts.setOptions({
             chart: {
                 style: {
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             credits: {
@@ -450,18 +450,18 @@ function get2015Map () {
                 spacingTop: 15
             },
             title: {
-                text: 'Hates crimes against African-American community in 2015',
+                text: '',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             subtitle: {
                 text: 'Hover on counties to see data',
                 style: {
                     fontWeight: '400',
-                    fontFamily: 'Roboto Condensed'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -558,7 +558,7 @@ function get2015Map () {
         Highcharts.setOptions({
             chart: {
                 style: {
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             credits: {
@@ -574,7 +574,6 @@ function get2015Map () {
 }
 
 function get2016Map () {
-    // Default is 2012 map 
     $.getJSON("data/2016afam-data.json", function(data2016) {
         var countiesMap = Highcharts.geojson(Highcharts.maps['countries/us/us-all-all']),
             lines = Highcharts.geojson(Highcharts.maps['countries/us/us-all-all'], 'mapline'),
@@ -590,18 +589,18 @@ function get2016Map () {
                 spacingTop: 15
             },
             title: {
-                text: 'Hates crimes against African-American community in 2016',
+                text: '',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             subtitle: {
                 text: 'Hover on counties to see data',
                 style: {
                     fontWeight: '400',
-                    fontFamily: 'Roboto Condensed'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -698,7 +697,7 @@ function get2016Map () {
         Highcharts.setOptions({
             chart: {
                 style: {
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             credits: {
