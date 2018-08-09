@@ -19,7 +19,7 @@
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'Oswald'
+            fontFamily: 'Roboto'
         }
     },
     lang: {
@@ -77,10 +77,14 @@ Highcharts.chart('container', {
                 legendItemClick: function () {
                     return false;
                 }
-            },
-            dataLabels: {
-                enabled: true
             }
+        },
+        series: {
+            dataLabels: {
+                enabled: true,
+                align: 'left'
+            },
+            pointPadding: 0.9
         }
     },
 
@@ -94,6 +98,8 @@ Highcharts.chart('container', {
     series: [{
         name: '2015',
         color: '#171717',
+        pointWidth: 12,
+        // groupPadding: .3,
         data: [
             {
                 y: 4,
@@ -189,6 +195,7 @@ Highcharts.chart('container', {
     }, {
         name: '2016',
         color: '#A10D03',
+        pointWidth: 12,
         data: [
             {
                 y: 32,
