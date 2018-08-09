@@ -36,9 +36,9 @@ select.form-control {
 
 .hia-graphic{
 	display: block;
-	height: 500px;
+	height: 600px;
 	min-width: 310px;
-	max-width: 600px;
+	max-width: 750px;
 	margin: 0 auto;
 }
 

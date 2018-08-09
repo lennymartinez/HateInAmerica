@@ -52,7 +52,7 @@ Highcharts.chart('container', {
     },
 
     xAxis: {
-        categories: ['Ohio State University', 'Keene State College', 'University of Wisconsin at Madison', 'Nassau Community College', 'Metropolitan State University', 'Indiana Univ. - Purdue Univ. at Indianapolis', 'Onondaga Community College', 'University of Akron', 'Dartmouth College', 'Santa Monica College', 'Roxbury Community College', 'Montana State University at Bozeman', 'Brown University', 'Salem College', 'Harvard University', 'University of Michigan (Ann Arbor)', 'University of Southern California', 'Cornell University'],
+        categories: ['OSU', 'Keene State', 'Wisconsin', 'Nassau CC', 'Metropolitan State', 'IU - Purdue', 'Onondaga CC', 'Akron', 'Dartmouth', 'Santa Monica', 'Roxbury CC', 'Montana State', 'Brown', 'Salem College', 'Harvard ', 'U of Michigan', 'Southern California', 'Cornell'],
         title: {
             text: null
         }
@@ -82,12 +82,15 @@ Highcharts.chart('container', {
             dataLabels: {
                 enabled: true
             }
-        }
+        },
+        series: {
+            pointWidth: 9,
+            pointPadding: 0,
+            groupPadding: 0.1        }
     },
 
     tooltip: {
         formatter: function () {
-            // console.log(this);
             return '<b>' + this.point.college + ' - ' + this.series.name + '</b><br />' + this.point.incidents;
         }
     },
@@ -95,7 +98,7 @@ Highcharts.chart('container', {
     series: [{
         name: '2015',
         color: '#171717',
-        pointWidth: 7,
+        // pointWidth: 7,
         data: [
             {
                 y: 4,
@@ -191,7 +194,7 @@ Highcharts.chart('container', {
     }, {
         name: '2016',
         color: '#A10D03',
-        pointWidth: 7,
+        // pointWidth: 7,
         data: [
             {
                 y: 32,
