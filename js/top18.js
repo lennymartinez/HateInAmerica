@@ -19,7 +19,7 @@
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'Roboto'
+            fontFamily: 'Roboto Mono'
         }
     },
     lang: {
@@ -30,6 +30,7 @@ Highcharts.setOptions({
 Highcharts.chart('container', {
 
     chart: {
+        backgroundColor: '#EFEEE8',
         type: 'bar'
     },
 
@@ -43,11 +44,11 @@ Highcharts.chart('container', {
     },
 
     title: {
-        text: 'Hate crimes reported by universities in 2015, 2016'
+        text: ''
     },
 
     subtitle: {
-        text: 'Ohio State University experienced the largest increase in reported hate crimes, going from 4 hate crimes in 2015to 32 hate crimes in 2016'
+        text: ''
     },
 
     xAxis: {
@@ -77,14 +78,10 @@ Highcharts.chart('container', {
                 legendItemClick: function () {
                     return false;
                 }
-            }
-        },
-        series: {
-            dataLabels: {
-                enabled: true,
-                align: 'left'
             },
-            pointPadding: 0.9
+            dataLabels: {
+                enabled: true
+            }
         }
     },
 
@@ -98,8 +95,7 @@ Highcharts.chart('container', {
     series: [{
         name: '2015',
         color: '#171717',
-        pointWidth: 12,
-        // groupPadding: .3,
+        pointWidth: 7,
         data: [
             {
                 y: 4,
@@ -195,7 +191,7 @@ Highcharts.chart('container', {
     }, {
         name: '2016',
         color: '#A10D03',
-        pointWidth: 12,
+        pointWidth: 7,
         data: [
             {
                 y: 32,
