@@ -17,7 +17,7 @@ function get2014Map() {
     Highcharts.setOptions({
         chart: {
             style: {
-                fontFamily: 'Roboto'
+                fontFamily: 'Roboto Mono'
             }
         },
         credits: {
@@ -44,7 +44,7 @@ function get2014Map() {
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -137,7 +137,7 @@ function get2015Map() {
     Highcharts.setOptions({
         chart: {
             style: {
-                fontFamily: 'Roboto'
+                fontFamily: 'Roboto Mono'
             }
         },
         credits: {
@@ -164,7 +164,7 @@ function get2015Map() {
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
@@ -284,7 +284,7 @@ function get2016Map() {
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
-                    fontFamily: 'Roboto'
+                    fontFamily: 'Roboto Mono'
                 }
             },
             mapNavigation: {
