@@ -152,7 +152,7 @@ function get2012Map () {
             }
         });
         // Instantiate the map
-        $('#container').highcharts('Map', options);
+        $('#container2').highcharts('Map', options);
     });
 }
 
@@ -172,7 +172,7 @@ function get2013Map () {
                 spacingTop: 15
             },
             title: {
-                text: '',
+                text: ' ',
                 style: {
                     fontWeight: '700',
                     fontSize: '1.5em',
@@ -291,7 +291,7 @@ function get2013Map () {
             }
         });
         // Instantiate the map
-        $('#container').highcharts('Map', options);
+        $('#container2').highcharts('Map', options);
     });
 }
 
@@ -430,7 +430,7 @@ function get2014Map () {
             }
         });
         // Instantiate the map
-        $('#container').highcharts('Map', options);
+        $('#container2').highcharts('Map', options);
     });
 }
 
@@ -569,7 +569,7 @@ function get2015Map () {
             }
         });
         // Instantiate the map
-        $('#container').highcharts('Map', options);
+        $('#container2').highcharts('Map', options);
     });
 }
 
@@ -709,6 +709,6 @@ function get2016Map () {
             }
         });
         // Instantiate the map
-        $('#container').highcharts('Map', options);
+        $('#container2').highcharts('Map', options);
     });
 }
