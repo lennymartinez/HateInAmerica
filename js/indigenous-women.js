@@ -45,7 +45,7 @@ $(function() {
                     enabled: true,
                     useHTML: true,
                     headerFormat: '',
-                    pointFormat: '<b>{point.name}</b><br />&#8226; Active: <b>{point.active}</b></br />&#8226; Purged: <b>{point.purged}</b></br /><b>&#8226; Total missing: {point.value}</b>'
+                    pointFormat: '<b>{point.name}</b><br/>&nbsp;<b>Missing Indigenous women:</b>&nbsp;{point.value}'
                 },
                 colorAxis: {
                     // stops: [
@@ -64,43 +64,43 @@ $(function() {
                     }, {
                         from: 1,
                         to: 70,
-                        color: 'rgba(23, 23, 23, .1)'
+                        color: 'rgba(161, 13, 3, .1)'
                     }, {
                         from: 71,
                         to: 140,
-                        color: 'rgba(23, 23, 23, .2)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 141,
                         to: 210,
-                        color: 'rgba(23, 23, 23, .3)'
+                        color: 'rgba(161, 13, 3, .3)'
                     }, {
                         from: 211,
                         to: 280,
-                        color: 'rgba(23, 23, 23, .4)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 281,
                         to: 350,
-                        color: 'rgba(23, 23, 23, .5)'
+                        color: 'rgba(161, 13, 3, .5)'
                     }, {
                         from: 351,
                         to: 420,
-                        color: 'rgba(23, 23, 23, .6)'
+                        color: 'rgba(161, 13, 3, .6)'
                     }, {
                         from: 421,
                         to: 490,
-                        color: 'rgba(23, 23, 23, .7)'
+                        color: 'rgba(161, 13, 3, .7)'
                     }, {
                         from: 491,
                         to: 560,
-                        color: 'rgba(23, 23, 23, .8)'
+                        color: 'rgba(161, 13, 3, .8)'
                     }, {
                         from: 561,
                         to: 630,
-                        color: 'rgba(23, 23, 23, .9)'
+                        color: 'rgba(161, 13, 3, .9)'
                     }, {
                         from: 631,
                         to: 700,
-                        color: 'rgba(23, 23, 23, 1)'
+                        color: 'rgba(161, 13, 3, 1)'
                     }]
                 },
                 series: [{
@@ -110,7 +110,7 @@ $(function() {
                     name: 'Missing Indigenous Women 2014',
                     states: {
                         hover: {
-                            color: 'rgba(161, 13, 3, .3)'
+                            color: 'rgba(161, 13, 3, 1)'
                         }
                     },
                     dataLabels: {
@@ -180,43 +180,43 @@ $(function() {
                     }, {
                         from: 1,
                         to: 70,
-                        color: 'rgba(23, 23, 23, .1)'
+                        color: 'rgba(161, 13, 3, .1)'
                     }, {
                         from: 71,
                         to: 140,
-                        color: 'rgba(23, 23, 23, .2)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 141,
                         to: 210,
-                        color: 'rgba(23, 23, 23, .3)'
+                        color: 'rgba(161, 13, 3, .3)'
                     }, {
                         from: 211,
                         to: 280,
-                        color: 'rgba(23, 23, 23, .4)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 281,
                         to: 350,
-                        color: 'rgba(23, 23, 23, .5)'
+                        color: 'rgba(161, 13, 3, .5)'
                     }, {
                         from: 351,
                         to: 420,
-                        color: 'rgba(23, 23, 23, .6)'
+                        color: 'rgba(161, 13, 3, .6)'
                     }, {
                         from: 421,
                         to: 490,
-                        color: 'rgba(23, 23, 23, .7)'
+                        color: 'rgba(161, 13, 3, .7)'
                     }, {
                         from: 491,
                         to: 560,
-                        color: 'rgba(23, 23, 23, .8)'
+                        color: 'rgba(161, 13, 3, .8)'
                     }, {
                         from: 561,
                         to: 630,
-                        color: 'rgba(23, 23, 23, .9)'
+                        color: 'rgba(161, 13, 3, .9)'
                     }, {
                         from: 631,
                         to: 700,
-                        color: 'rgba(23, 23, 23, 1)'
+                        color: 'rgba(161, 13, 3, 1)'
                     }]
                 },
                 series: [{
@@ -277,7 +277,7 @@ $(function() {
                     enabled: true,
                     useHTML: true,
                     headerFormat: '',
-                    pointFormat: '<b>{point.name}</b><br />&#8226; Active: <b>{point.active}</b></br />&#8226; Purged: <b>{point.purged}</b></br /><b>&#8226; Total missing: {point.value}</b>'
+                    pointFormat: '<b>{point.name}</b><br/>&nbsp;<b>Missing Indigenous women:</b>&nbsp;{point.value}'
                 },
                 colorAxis: {
                     // stops: [
@@ -296,43 +296,43 @@ $(function() {
                     }, {
                         from: 1,
                         to: 70,
-                        color: 'rgba(23, 23, 23, .1)'
+                        color: 'rgba(161, 13, 3, .1)'
                     }, {
                         from: 71,
                         to: 140,
-                        color: 'rgba(23, 23, 23, .2)'
+                        color: 'rgba(161, 13, 3, .2)'
                     }, {
                         from: 141,
                         to: 210,
-                        color: 'rgba(23, 23, 23, .3)'
+                        color: 'rgba(161, 13, 3, .3)'
                     }, {
                         from: 211,
                         to: 280,
-                        color: 'rgba(23, 23, 23, .4)'
+                        color: 'rgba(161, 13, 3, .4)'
                     }, {
                         from: 281,
                         to: 350,
-                        color: 'rgba(23, 23, 23, .5)'
+                        color: 'rgba(161, 13, 3, .5)'
                     }, {
                         from: 351,
                         to: 420,
-                        color: 'rgba(23, 23, 23, .6)'
+                        color: 'rgba(161, 13, 3, .6)'
                     }, {
                         from: 421,
                         to: 490,
-                        color: 'rgba(23, 23, 23, .7)'
+                        color: 'rgba(161, 13, 3, .7)'
                     }, {
                         from: 491,
                         to: 560,
-                        color: 'rgba(23, 23, 23, .8)'
+                        color: 'rgba(161, 13, 3, .8)'
                     }, {
                         from: 561,
                         to: 630,
-                        color: 'rgba(23, 23, 23, .9)'
+                        color: 'rgba(161, 13, 3, .9)'
                     }, {
                         from: 631,
                         to: 700,
-                        color: 'rgba(23, 23, 23, 1)'
+                        color: 'rgba(161, 13, 3, 1)'
                     }]
                 },
                 series: [{
