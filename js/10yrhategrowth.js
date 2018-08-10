@@ -1,4 +1,3 @@
-//$(function () {
 (function(H) {
   function deferRender(proceed) {
       var series = this,
@@ -36,16 +35,15 @@ Highcharts.chart('container', {
     },
 
     credits: {
-      text: '',
-      href: ''
+      enabled: false
     },
 
     title: {
-      text: ''
+      text: null
     },
   
     subtitle: {
-      text: ''
+      text: null
     },
     legend: {
       enabled: false
@@ -67,7 +65,6 @@ Highcharts.chart('container', {
 
     tooltip: {
       formatter: function () {
-          // console.log(this);
           return '<span class="report-year">' + this.x + '</span><br>Hate crimes reported: <b>' + this.y + '</b>';
       }
     },
@@ -87,5 +84,3 @@ Highcharts.chart('container', {
     }
   
   });
-
-//});

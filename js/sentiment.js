@@ -19,7 +19,7 @@
 Highcharts.setOptions({
     chart: {
         style: {
-            fontFamily: 'Oswald'
+            fontFamily: 'Roboto Mono'
         }
     },
     lang: {
@@ -30,24 +30,24 @@ Highcharts.setOptions({
 Highcharts.chart('container', {
 
     chart: {
+        backgroundColor: '#EFEEE8',
         type: 'line'
     },
 
     credits: {
-      text: 'SOURCE: Twitter',
-      href: ''
+        enabled: false
     },
 
     title: {
-      text: 'Quantifying Sentiment'
+        text: null
     },
   
     subtitle: {
-      text: 'Number of posts tracked on twitter'
+        text: null
     },
     
     legend: {
-      enabled: false
+        enabled: false
     },
     
     xAxis: {
@@ -55,30 +55,30 @@ Highcharts.chart('container', {
     },
     
     yAxis: {
-      title: {
-        text: 'Number of Posts'
-      }
+        title: {
+            text: 'Number of Posts'
+        }
     },
   
     plotOptions: {
-      series: {
-        label: {
-          connectorAllowed: false
-        },
-        pointStart: Date.UTC(2018, 5, 10),
-        pointInterval: 24 * 3600 * 1000 // one day
-      }
+        series: {
+            color: '',
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: Date.UTC(2018, 5, 10),
+            pointInterval: 24 * 3600 * 1000 // one day
+        }
     },
 
     tooltip: {
-      formatter: function () {
-          // console.log(this);
-          if (this.point.myTitle === '') {
-            return '\u25CF Number of posts: <b>' + this.y + '</b>';
-          } else {
-            return '<b>' + this.point.myTitle + '</b><br /><br /><p>' + this.point.myText + '</p><br /><br />\u25CF Number of posts: <b>' + this.y + '</b>';
-          }
-      }
+        formatter: function () {
+            if (this.point.myTitle === '') {
+                return '\u25CF Number of posts: <b>' + this.y + '</b>';
+            } else {
+                return '<b>' + this.point.myDate + ' \u2014 ' + this.point.myTitle + '</b><br /><br /><p>' + this.point.myText + '</p><br /><br />\u25CF Number of posts: <b>' + this.y + '</b>';
+            }
+        }
     },
 
     responsive: {
@@ -91,7 +91,7 @@ Highcharts.chart('container', {
 
     series: [{
         name:"Hate crimes reported",
-        color: '#BA8A18',
+        color: 'rgba(172, 173, 175, .5)',
         data: [
         {
             y: 12, 
@@ -102,8 +102,9 @@ Highcharts.chart('container', {
             myTitle: '',
             myText: ''
         }, {
-            y: 11, 
+            y: 11,
             myTitle: 'Reunification of children under the age of 5',
+            myDate: 'June 12',
             myText: 'The Trump Administration completes reunification for eligible children under the age of 5. According to the Department of Justice, at this point 57 of the 103 children have been reunified',
             marker: {
                 symbol: 'diamond',
@@ -121,6 +122,7 @@ Highcharts.chart('container', {
         }, {
             y: 13,
             myTitle: 'Hundreds march in protest',
+            myDate: 'June 15',
             myText: 'The Department of Homeland Security announces that nearly 2,000 children have been separated during the  zero-tolerance initiative. The announcement cues hundreds to march for the “Families Belong Together” movement.',
             marker: {
                 symbol: 'diamond',
@@ -138,6 +140,7 @@ Highcharts.chart('container', {
         }, {
             y: 34, 
             myTitle: 'The administration is "doing its job"',
+            myDate: 'June 18',
             myText: 'Homeland Security Secretary Kirstjen Nielsen says the adminstration "will not apologize" for separating families at the border, claiming the agency was just doing its job.',
             marker: {
                 symbol: 'diamond',
@@ -147,6 +150,7 @@ Highcharts.chart('container', {
         }, {
             y: 61, 
             myTitle: 'Republicans separate from Trump',
+            myDate: 'June 19',
             myText: 'The G.O.P moves to end the separation of families at the border – a decision that divided Republicans from President Trump.',
             marker: {
                 symbol: 'diamond',
@@ -156,6 +160,7 @@ Highcharts.chart('container', {
         }, {
             y: 56,
             myTitle: 'The executive order post public pressure',
+            myDate: 'June 20',
             myText: 'Trump signs an executive order to keep families together at the U.S. Mexico border after an explosive public outrage. “I didn’t like the sight or feeling of families being separated,” Trump said.',
             marker: {
                 symbol: 'diamond',
@@ -165,6 +170,7 @@ Highcharts.chart('container', {
         }, {
             y: 45, 
             myTitle: 'Pentagon to house migrant children',
+            myDate: 'June 21',
             myText: 'The Pentagon agrees to accommodate as many as 20,000 unaccompanied migrant children from the U.S.-Mexico border.',
             marker: {
                 symbol: 'diamond',
