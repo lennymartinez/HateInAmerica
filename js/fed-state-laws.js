@@ -15,8 +15,6 @@ $(function (){
     });
 
     $.getJSON("data/fed-state-laws-data.json", function(dataset) {
-        //  console.log(dataset);
-        // $('#container').highcharts('Map', {
         Highcharts.mapChart('container', {
             legend: {
                 enabled: false
@@ -30,22 +28,15 @@ $(function (){
                         chart.series[0].data.forEach(function(element){
                             if ($.inArray(element.name, rogueState) != -1) {
                                 element.update({
-                                    // borderColor: 'rgba(158, 37, 49, .75)',
-                                    // borderWidth: 2,
-                                    //color: '#BADA55',
                                     color: {
                                         pattern: {
                                             path: {
                                                 d: 'M 3 3 L 8 3 L 8 8 Z',
-                                                // d: 'M 0 0 L 10 10 M 9 -1 L 11 1 M -1 9 L 1 11',
-                                                // fill: '#FF0000',
                                                 strokeWidth: 2
                                             },
                                             width: 4,
                                             height: 4,
-                                            // color: '#5DA7FF',
                                             color: 'url(#highcharts-default-pattern-1)'
-                                            // opacity: 0.4
                                         }
                                     }
                                 });
